@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="lastname">Nom : </label>
+            <input type="text" name="lastname" id="lastname" required/>
+            <span id="entrez_votre_nom"></span><br>
+            <label for="firstname">Prénom : </label>
+            <input type="text" name="firstname" id="firstname" required/><br>
+            <label for="city">Ville : </label>
+            <input type="text" name="city" id="city" required/><br><br>
+            <button name="submit" onclick="valeur()" id="submit">Valider</button>
+        </form>
+        <script>
+          function valeur() {
+             var lastname = document.getElementById('lastname').value;
+             var firstname = document.getElementById('firstname').value;
+             var city = document.getElementById('city').value;
+
+             alert(lastname+"\n"+firstname+"\n"+city);
+             }
+        </script>
+
+        <!-- <script>
+          var validation = document.getElementById('submit');
+          var lastname = document.getElementById('lastname');
+          var lastname_m = document.getElementById('entrez_votre_nom');
+          validation.addEventListener('click', f_valid);
+
+          function f_valid(e){
+            if (lastname.validity.valueMissing) {
+              e.preventDefault();
+              lastname_m.textContent = 'Entrez votre Nom';
+              lastname_m.style.color = 'red';
+            }
+          }
+        </script> -->
+    </body>
+</html>
